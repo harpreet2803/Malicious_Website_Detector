@@ -1,0 +1,26 @@
+{
+  "name": "Malware Detection",
+  "description": "Detect malicious websites",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": { "service_worker": "background.js", "type": "module" },
+  "minimum_chrome_version": "92",
+  "permissions": ["webRequest","declarativeNetRequest","scripting"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms allow-modals",
+    "trusted_types": "trusted-types default",
+    "web_accessible_resources": "model.pkl",
+    "script-src": ["'self'", "'unsafe-eval'"]
+  },
+  "content_scripts": [
+    {
+      "matches":["https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
