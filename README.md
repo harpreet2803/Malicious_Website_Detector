@@ -1,0 +1,1 @@
+Cybersecurity is a challenging task especially among the rising threats on the internet. Malicious websites are a common and serious threat to cybersecurity. They host unsolicited content and lure unsuspecting users to become victims of scams (monetary loss, theft of private information, and malware installation), and cause losses of billions of dollars every year.
